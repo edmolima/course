@@ -20,4 +20,29 @@ describe('FizzBuzz', () => {
 
     expect(actual).toEqual(expectedValue);
   });
+  test("should replace fizzbuzz whenever there is a number that is divisible by 3 and 5", () => {
+    const given = 15;
+
+    const expectedValue = [
+      "1",
+      "2",
+      "Fizz",
+      "4",
+      "Buzz",
+      "Fizz",
+      "7",
+      "8",
+      "Fizz",
+      "Buzz",
+      "11",
+      "Fizz",
+      "13",
+      "14",
+      "FizzBuzz",
+    ];
+
+    const actual = fizzbuzz(given);
+
+    expect(actual).toEqual(expectedValue);
+  });
 });

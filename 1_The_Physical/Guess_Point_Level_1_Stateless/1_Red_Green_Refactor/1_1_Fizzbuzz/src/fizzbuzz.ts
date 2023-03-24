@@ -4,7 +4,9 @@ export const fizzbuzz = (number: number): string[] => {
     const isDivisibleBy3 = i % 3 === 0;
     const isDivisibleBy5 = i % 5 === 0;
     
-    if (isDivisibleBy3) {
+    if (isDivisibleBy3 && isDivisibleBy5) {
+      result.push('FizzBuzz');
+    } else if (isDivisibleBy3) {
       result.push('Fizz');
     } else if (isDivisibleBy5) {
       result.push('Buzz');
