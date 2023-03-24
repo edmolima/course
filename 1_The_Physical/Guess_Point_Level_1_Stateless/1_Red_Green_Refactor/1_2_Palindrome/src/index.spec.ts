@@ -16,4 +16,11 @@ describe('Palindrome checker', () => {
 
     expect(actual).toBe(false)
   });
+  test('should also be able to detect palindromes in phrases', () => {
+    const given = "was it a rat i saw"
+
+    const actual = palindrome(given)
+
+    expect(actual).toBe(true)
+  });
 })
