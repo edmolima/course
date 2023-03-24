@@ -9,13 +9,23 @@ describe('Palindrome checker', () => {
 
     expect(actual).toBe(true)
   });
+
+  test('should return true for a palindrome even though the initial letter is capitalized', () => {
+    const given = "Mom"
+
+    const actual = palindrome(given)
+
+    expect(actual).toBe(true)
+  });
+
   test('should return false for a non-palindrome', () => {
-    const given = "mommy"
+    const given = "bill"
 
     const actual = palindrome(given)
 
     expect(actual).toBe(false)
   });
+
   test('should also be able to detect palindromes in phrases', () => {
     const given = "was it a rat i saw"
 
