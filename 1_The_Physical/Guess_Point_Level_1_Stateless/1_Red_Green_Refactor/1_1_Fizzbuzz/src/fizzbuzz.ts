@@ -1,18 +1,24 @@
 export const fizzbuzz = (number: number): string[] => {
   let result: string[] = [];
   for (let i = 1; i <= number; i++) {
-    const isDivisibleBy3 = i % 3 === 0;
-    const isDivisibleBy5 = i % 5 === 0;
+    const isDivisibleByThree = i % 3 === 0;
+    const isDivisibleByFive = i % 5 === 0;
     
-    if (isDivisibleBy3 && isDivisibleBy5) {
-      result.push('FizzBuzz');
-    } else if (isDivisibleBy3) {
-      result.push('Fizz');
-    } else if (isDivisibleBy5) {
-      result.push('Buzz');
-    } else {
-      result.push(i.toString());
+    switch (true) {
+      case isDivisibleByThree && isDivisibleByFive:
+        result.push("FizzBuzz");
+        break;
+      case isDivisibleByThree:
+        result.push("Fizz");
+        break;
+      case isDivisibleByFive:
+        result.push("Buzz");
+        break;
+      default:
+        result.push(i.toString());
+        break;
     }
   }
+
   return result;
 }
